@@ -20,12 +20,17 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Example command handling (No migration, just setup)
+	// Example command handling with migration support
 	cmd := os.Args[len(os.Args)-1]
 	switch cmd {
 	case "setup":
 		// Perform any CouchDB-specific setup or initialization here
 		log.Println("Setup complete")
+	case "up":
+		// Implement migration logic here (e.g., creating databases, inserting initial data)
+		log.Println("Performing migration up")
+		// Add migration logic for 'up'
+		performMigrationUp(couchDB)
 	default:
 		log.Fatalf("Unknown command: %s", cmd)
 	}
@@ -41,4 +46,12 @@ func initStorage(db *kivik.DB) error {
 
 	log.Println("DB: Successfully connected!")
 	return nil
+}
+
+// performMigrationUp defines the logic to migrate the database up
+func performMigrationUp(db *kivik.DB) {
+	// Example migration logic: Creating a new document or database
+	log.Println("Running 'up' migration...")
+
+	log.Println("Migration up completed successfully!")
 }

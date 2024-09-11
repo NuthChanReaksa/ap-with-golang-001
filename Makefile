@@ -1,11 +1,11 @@
 build:
-	@go build -o bin/ecom cmd/main.go
+	@go build -o bin/ap-with-golang-1 cmd/main.go
 
 test:
 	@go test -v ./...
-	
+
 run: build
-	@./bin/ecom
+	@./bin/ap-with-golang-1 setup
 
 migration:
 	@migrate create -ext sql -dir cmd/migrate/migrations $(filter-out $@,$(MAKECMDGOALS))
