@@ -2,8 +2,8 @@ package order
 
 import (
 	"context"
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
 	"github.com/go-kivik/kivik"
-	"github.com/sikozonpc/ecom/types"
 )
 
 type Store struct {

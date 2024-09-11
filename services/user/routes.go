@@ -2,12 +2,12 @@ package user
 
 import (
 	"fmt"
+	"github.com/NuthChanReaksa/ap-with-golang-001/configs"
+	"github.com/NuthChanReaksa/ap-with-golang-001/services/auth"
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
+	"github.com/NuthChanReaksa/ap-with-golang-001/utils"
 	"github.com/go-playground/validator/v10"
 	"github.com/gorilla/mux"
-	"github.com/sikozonpc/ecom/configs"
-	"github.com/sikozonpc/ecom/services/auth"
-	"github.com/sikozonpc/ecom/types"
-	"github.com/sikozonpc/ecom/utils"
 	"net/http"
 )
 

@@ -4,12 +4,12 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/services/cart"
+	"github.com/NuthChanReaksa/ap-with-golang-001/services/order"
+	"github.com/NuthChanReaksa/ap-with-golang-001/services/product"
+	"github.com/NuthChanReaksa/ap-with-golang-001/services/user"
 	"github.com/go-kivik/kivik"
 	"github.com/gorilla/mux"
-	"github.com/sikozonpc/ecom/services/cart"
-	"github.com/sikozonpc/ecom/services/order"
-	"github.com/sikozonpc/ecom/services/product"
-	"github.com/sikozonpc/ecom/services/user"
 )
 
 type APIServer struct {

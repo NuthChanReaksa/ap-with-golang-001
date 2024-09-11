@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/configs"
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
+	"github.com/NuthChanReaksa/ap-with-golang-001/utils"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/sikozonpc/ecom/configs"
-	"github.com/sikozonpc/ecom/types"
-	"github.com/sikozonpc/ecom/utils"
 )
 
 type contextKey string

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
 	"github.com/go-kivik/kivik"
 	"github.com/google/uuid"
-	"github.com/sikozonpc/ecom/types"
 )
 
 type Store struct {

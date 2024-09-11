@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
 	"github.com/gorilla/mux"
-	"github.com/sikozonpc/ecom/types"
 )
 
 func TestUserServiceHandlers(t *testing.T) {

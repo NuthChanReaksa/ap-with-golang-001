@@ -2,7 +2,7 @@ package cart
 
 import (
 	"fmt"
-	"github.com/sikozonpc/ecom/types"
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
 )
 
 func getCartItemsIDs(items []types.CartCheckoutItem) ([]string, error) {

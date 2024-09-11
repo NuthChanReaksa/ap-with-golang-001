@@ -1,10 +1,10 @@
 package db
 
 import (
-	"context"                       // Import context package
+	"context" // Import context package
+	"github.com/NuthChanReaksa/ap-with-golang-001/configs"
 	_ "github.com/go-kivik/couchdb" // Import the CouchDB driver
 	"github.com/go-kivik/kivik"
-	"github.com/sikozonpc/ecom/configs"
 )
 
 func NewCouchDBStorage() (*kivik.DB, error) {

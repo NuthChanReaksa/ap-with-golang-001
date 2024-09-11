@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/db"
 	"github.com/go-kivik/kivik"
-	"github.com/sikozonpc/ecom/db"
 )
 
 func main() {

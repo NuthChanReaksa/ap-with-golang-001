@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/NuthChanReaksa/ap-with-golang-001/types"
 	"github.com/go-playground/validator/v10"
-	"github.com/sikozonpc/ecom/types"
 )
 
 var Validate = validator.New()
