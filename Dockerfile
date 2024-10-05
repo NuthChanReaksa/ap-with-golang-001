@@ -1,26 +1,26 @@
-# Use the official Go image as the base image
-FROM golang:1.23 AS build
+# Builder
+FROM golang:1.20.7-alpine3.17 as builder
 
-# Set the Current Working Directory inside the container
+RUN apk update && apk upgrade && \
+    apk --update add git make bash build-base
+
 WORKDIR /app
 
-# Copy the Go Modules manifests
-COPY go.mod go.sum ./
-
-# Download the Go Modules dependencies
-RUN go mod download
-
-# Copy the source code into the container
 COPY . .
 
-# Build the Go app
-RUN go build -o main ./cmd/migrate/main.go
+RUN make build
 
-# Start a new stage from scratch
-FROM scratch
+# Distribution
+FROM alpine:latest
 
-# Copy the Pre-built binary file from the previous stage
-COPY --from=build /app/main .
+RUN apk update && apk upgrade && \
+    apk --update --no-cache add tzdata && \
+    mkdir /app 
 
-# Command to run the executable
-CMD ["./main"]
+WORKDIR /app 
+
+EXPOSE 9090
+
+COPY --from=builder /app/engine /app/
+
+CMD /app/engine
